@@ -1,10 +1,10 @@
-a=int(input());c='';set=set()
+a=int(input());c=''
 def dfs(b):
     global c
     for i in ["1","6","8","9"]:
         if b==a:
-            if solve(c):
-                if c not in set:print(c);set.add(c)
+            if solve(c):print(c)
+            return
         else:
             c+=i;dfs(b+1);c=c[:-1]
 def solve(str,str2=''):
